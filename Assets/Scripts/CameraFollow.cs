@@ -8,6 +8,11 @@ public class CameraFollow : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.position = new Vector3(Mathf.SmoothDamp(transform.position.x, player.transform.position.x, ref vel.x, timeToSmooth), Mathf.SmoothDamp(transform.position.y, player.transform.position.y, ref vel.y, timeToSmooth), transform.position.z);
+        //Closes the gap between the first and the second position over a set duration
+        float posX = Mathf.SmoothDamp(transform.position.x, player.transform.position.x, ref vel.x, timeToSmooth);
+        float posY = Mathf.SmoothDamp(transform.position.y, player.transform.position.y, ref vel.y, timeToSmooth);
+
+        //Changes the position of the object with the script on it to the position of the player
+        transform.position = new Vector3(posX, posY, transform.position.z);
     }    
 }

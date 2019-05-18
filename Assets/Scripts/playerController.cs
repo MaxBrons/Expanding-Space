@@ -13,7 +13,9 @@ public class playerController : MonoBehaviour
 
     void Start()
     {
+        //Hides the cursor and lockes the cursor to the bounderies of the gamescreen
         Cursor.lockState = CursorLockMode.Locked;
+
         player = GameObject.FindWithTag("Player").transform;
     }
 
@@ -24,22 +26,24 @@ public class playerController : MonoBehaviour
 
     public void Movement()
     {
+        //Sets the rotation of the player to the x position of the mouse
         float rotation = -Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
         transform.Rotate(0, 0, rotation);
 
         if (Input.GetKeyDown(KeyCode.W))
         {
             MayMoveNow = true;
-            velocity = Vector2.zero;
+            velocity = Vector2.zero; //Resets the velocity of the player
         }
         else if (Input.GetKeyUp(KeyCode.W))
             MayMoveNow = false;
 
         if (MayMoveNow)
         {
+            //Player moves forward when the W key is pressed
             force = Vector2.up * acceleration * Time.deltaTime;
             velocity += force;
-            velocity = Vector2.ClampMagnitude(velocity, maxVelocity);
+            velocity = Vector2.ClampMagnitude(velocity, maxVelocity);//Increases speed over time
             transform.Translate(velocity * Time.deltaTime);
         }
     }
