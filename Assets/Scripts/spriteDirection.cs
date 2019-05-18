@@ -13,9 +13,12 @@ public class spriteDirection : MonoBehaviour
         playerSprite = GetComponent<SpriteRenderer>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         var angle = target.transform.eulerAngles.z;
+        if (angle < 0)
+            angle += 360;
+
         if (angle <= 30 && angle >= 0 || angle <= 360 && angle >= 330)
             playerSprite.sprite = spritesArray[0];
         else if (angle > 30 && angle < 60)
