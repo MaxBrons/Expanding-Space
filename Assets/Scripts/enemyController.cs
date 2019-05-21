@@ -6,17 +6,6 @@ public class enemyController : MonoBehaviour
     public bool follow = false;
     public float speed = 0.05f;
 
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-            follow = true;     
-    }
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-            follow = false;
-    }
-
     void FixedUpdate()
     {
         if (follow)
@@ -31,5 +20,19 @@ public class enemyController : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, zAngle);
         }
     }
-        
+
+    //If you trigger the collider than the enemy will follow the player
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+            follow = true;
+    }
+
+    //If you stop triggering the collider the enemy will stop following the player
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+            follow = false;
+    }
+
 }

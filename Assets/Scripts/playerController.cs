@@ -1,15 +1,20 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class playerController : MonoBehaviour
 {
     Vector2 velocity = Vector2.zero;
     Vector2 force;
     Transform player;
-    public float speed = 3;
+    public GameObject bulletBullet;
+    public float health,speed = 3;
     public float maxVelocity = 5f;
     public float rotationSpeed = 20f;
-    public float acceleration = 1f;
+    public float acceleration,fireRate = 1f;
     bool MayMoveNow = false;
+    bool mayShoot = true;
+    float currentTime = 0f;
+    float step = 0.2f;
 
     void Start()
     {
@@ -22,6 +27,7 @@ public class playerController : MonoBehaviour
     void FixedUpdate()
     {
         Movement();
+        StartCoroutine(Shoot());
     }
 
     public void Movement()
@@ -48,11 +54,21 @@ public class playerController : MonoBehaviour
         }
     }
 
-    public void Shoot()
+    public IEnumerator Shoot()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && mayShoot)
         {
-            //bullet instantiation;
-        }
+            mayShoot = false;
+            currentTime += step;
+            Instantiate(bulletBullet, transform.position, transform.rotation);
+            yield return new WaitForSeconds(1f);
+            mayShoot = true;
+        }        
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("PickUp"))
+            collision.gameObject.SetActive(false);
     }
 }
