@@ -1,10 +1,17 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class enemyController : MonoBehaviour
 {
     public GameObject player;
-    public bool follow = false;
+    public GameObject bulletBullet;
+
+    private bool follow = false;
     public float speed = 0.05f;
+    public int health = 3;
+
+    private bool mayShoot = true;
+    public float WaitToNextShot = 1f;
 
     void FixedUpdate()
     {
@@ -18,6 +25,10 @@ public class enemyController : MonoBehaviour
             dir.Normalize();
             float zAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90;
             transform.rotation = Quaternion.Euler(0, 0, zAngle);
+
+            //The enemy will start shooting at the player
+            if (mayShoot)
+                StartCoroutine(Shoot());
         }
     }
 
@@ -26,6 +37,17 @@ public class enemyController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
             follow = true;
+
+        //If the bullet hits the player, it will destroy the 
+        //bullet and damage the player
+        if (collision.gameObject.tag == "Bullet")
+        {
+            Destroy(collision.gameObject);
+            if (health != 0)
+                health--;
+            else
+                Debug.Log("You Died");
+        }
     }
 
     //If you stop triggering the collider the enemy will stop following the player
@@ -33,6 +55,17 @@ public class enemyController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
             follow = false;
+    }
+
+    public IEnumerator Shoot()
+    {
+        mayShoot = false;
+        //Spawn in the bullet
+        Instantiate(bulletBullet, transform.position, transform.rotation);
+
+        //Prevents the enemy from shooting to rapid
+        yield return new WaitForSeconds(WaitToNextShot);
+        mayShoot = true;
     }
 
 }
