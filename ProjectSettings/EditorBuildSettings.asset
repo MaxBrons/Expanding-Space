@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 7b26e3e553677714b8e35fc8fd2df932
   - enabled: 1
+    path: Assets/Scenes/Base.unity
+    guid: 275ff9257043e0145a3c3da0ecfa47c2
+  - enabled: 1
     path: Assets/Scenes/ExpandingSpace.unity
     guid: 5a3e41be11a70e041b10fbcf5135f148
   m_configObjects: {}
