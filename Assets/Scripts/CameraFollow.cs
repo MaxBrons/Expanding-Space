@@ -4,7 +4,7 @@ public class CameraFollow : MonoBehaviour
 {
     public Transform player;
     Vector3 vel = Vector3.zero;
-    public float timeToSmooth = 0.3f;
+    [SerializeField] private float timeToSmooth = 0.3f;
 
     void FixedUpdate()
     {

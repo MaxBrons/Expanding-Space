@@ -6,19 +6,20 @@ public class enemyController : MonoBehaviour
     public GameObject player;
     public GameObject bulletBullet;
 
-    private bool follow = false;
-    public float speed = 0.05f;
-    public int health = 3;
+    [SerializeField] private float speed = 0.05f;
+    [SerializeField] private float WaitToNextShot = 1f;
 
+    private bool follow = false;
     private bool mayShoot = true;
-    public float WaitToNextShot = 1f;
+    
 
     void FixedUpdate()
     {
         if (follow)
         {
             //The enemy will move towards the player if in range of the trigger
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            if ((player.transform.position - transform.position).sqrMagnitude > 25.0f)
+                transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
 
             //The enemy will rotate towards the player properly if in range of the trigger
             Vector3 dir = player.transform.position - transform.position;
@@ -37,17 +38,6 @@ public class enemyController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
             follow = true;
-
-        //If the bullet hits the player, it will destroy the 
-        //bullet and damage the player
-        if (collision.gameObject.tag == "Bullet")
-        {
-            Destroy(collision.gameObject);
-            if (health != 0)
-                health--;
-            else
-                Debug.Log("You Died");
-        }
     }
 
     //If you stop triggering the collider the enemy will stop following the player
