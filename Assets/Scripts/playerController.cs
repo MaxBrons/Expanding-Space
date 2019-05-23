@@ -1,20 +1,25 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class playerController : MonoBehaviour
 {
     Vector2 velocity = Vector2.zero;
     Vector2 force;
     Transform player;
+
     public GameObject bulletBullet;
+    public Text health_Amount;
+    public Animator anim;
 
-    public float health = 3;
-    public float speed = 3;
-    public float maxVelocity = 5f;
-    public float rotationSpeed = 20f;
-    public float acceleration = 1f;
-
-    public float WaitToNextShot = 1f;
+    [SerializeField] private float health = 3;
+    [SerializeField] private float maxVelocity = 5f;
+    [SerializeField] private float rotationSpeed = 20f;
+    [SerializeField] private float acceleration = 1f;
+    [SerializeField] private float WaitToNextShot = 1f;
+    [SerializeField] private float speed = 1f;
+    [SerializeField] private float xMax = 0f, xMin = 0f, yMax = 0f, yMin = 0f;
+    
     private bool mayShoot = true;
     private bool MayMoveNow = false;
 
@@ -25,6 +30,9 @@ public class playerController : MonoBehaviour
 
         //Gets the player's transform
         player = GameObject.FindWithTag("Player").transform;
+
+        //Sets the UI element of the player's health to the variable health
+        health_Amount.text = health.ToString();
     }
 
     void FixedUpdate()
@@ -36,9 +44,13 @@ public class playerController : MonoBehaviour
         //If the W key is pressed trigger the player's movement
         //You stop the trigger when the W key is released
         if (Input.GetKeyDown(KeyCode.W))
+        {
             MayMoveNow = true;
+            anim.SetTrigger("Move");
+        }
         else if (Input.GetKeyUp(KeyCode.W))
         {
+            anim.SetTrigger("Stop");
             MayMoveNow = false;
             velocity = Vector2.zero; //Resets the velocity of the player
         }
@@ -46,7 +58,7 @@ public class playerController : MonoBehaviour
         if (MayMoveNow)
         {
             //Player moves forward when the W key is pressed
-            force = Vector2.up * acceleration * Time.deltaTime;
+            force = Vector2.up * speed * acceleration * Time.deltaTime;
             velocity += force;
 
             //Increases the movement speed over time
@@ -57,6 +69,11 @@ public class playerController : MonoBehaviour
         //You shoot when the left mouse button is pressed
         if (Input.GetButtonDown("Fire1") && mayShoot)
             StartCoroutine(Shoot());
+
+        //Forces the player to stay in a surtant play area
+        transform.position = new Vector2(
+        Mathf.Clamp(transform.position.x, xMin, xMax),
+        Mathf.Clamp(transform.position.y, yMin, yMax));
     }
 
     public IEnumerator Shoot()
@@ -78,8 +95,11 @@ public class playerController : MonoBehaviour
         if (collision.gameObject.tag == "EnemyBullet")
         {
             Destroy(collision.gameObject);
-            if (health != 0)
+            if (health > 1)
+            {
                 health--;
+                health_Amount.text = health.ToString();
+            }
             else
                 Debug.Log("You Died");
         }

@@ -2,7 +2,7 @@
 
 public class backgroundScroller : MonoBehaviour
 {
-    public float parralax = 2f;
+    [SerializeField] private float parralax = 2f;
 
     void Update()
     {
