@@ -5,6 +5,7 @@ public class enemyController : MonoBehaviour
 {
     public GameObject player;
     public GameObject bulletBullet;
+    public Animator anim;
 
     [SerializeField] private float speed = 0.05f;
     [SerializeField] private float WaitToNextShot = 1f;
@@ -30,7 +31,11 @@ public class enemyController : MonoBehaviour
             //The enemy will start shooting at the player
             if (mayShoot)
                 StartCoroutine(Shoot());
+
+            anim.SetTrigger("Move");
         }
+        else
+            anim.SetTrigger("Stop");
     }
 
     //If you trigger the collider than the enemy will follow the player

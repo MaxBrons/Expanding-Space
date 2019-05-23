@@ -10,6 +10,7 @@ public class playerController : MonoBehaviour
 
     public GameObject bulletBullet;
     public Text health_Amount;
+    public Animator anim;
 
     [SerializeField] private float health = 3;
     [SerializeField] private float maxVelocity = 5f;
@@ -43,9 +44,13 @@ public class playerController : MonoBehaviour
         //If the W key is pressed trigger the player's movement
         //You stop the trigger when the W key is released
         if (Input.GetKeyDown(KeyCode.W))
+        {
             MayMoveNow = true;
+            anim.SetTrigger("Move");
+        }
         else if (Input.GetKeyUp(KeyCode.W))
         {
+            anim.SetTrigger("Stop");
             MayMoveNow = false;
             velocity = Vector2.zero; //Resets the velocity of the player
         }
