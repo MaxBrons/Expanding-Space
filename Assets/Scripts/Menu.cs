@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+
     public void PlayGame()
     {
         SceneManager.LoadScene(1);
@@ -23,6 +24,16 @@ public class Menu : MonoBehaviour
         Application.Quit();
     }
 
-    //gebruik inuminator
+    
+    float timer = 5.0f;
 
+    void Update()
+    {
+        timer -= Time.deltaTime;
+        
+        if(timer <= 0)
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
 }
