@@ -15,12 +15,14 @@ public class Menu : MonoBehaviour
 
     public void continueToPlay()
     {
-
+        SceneManager.LoadScene(0);
     }
 
     public void Exit()
     {
         Application.Quit();
     }
+
+    //gebruik inuminator
 
 }
