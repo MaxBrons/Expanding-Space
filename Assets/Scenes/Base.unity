@@ -735,6 +735,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sprite_voor_animatie_heli_pad_ding (1)_0
       objectReference: {fileID: 0}
+    - target: {fileID: 1517934481173024937, guid: 9e21ed0f2d29dc742929ec26c46b36e3,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8771712887770897311, guid: 9e21ed0f2d29dc742929ec26c46b36e3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -799,11 +804,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1517934481173024937, guid: 9e21ed0f2d29dc742929ec26c46b36e3,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7253181692918486395, guid: 9e21ed0f2d29dc742929ec26c46b36e3,
         type: 3}
@@ -928,13 +928,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1543952749}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 5.6383767, y: 3.079464, z: -660.9844}
+  m_LocalRotation: {x: 0.043619405, y: 0, z: 0, w: 0.9990483}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 5, y: 0, z: 0}
 --- !u!95 &1569175965
 Animator:
   serializedVersion: 3
