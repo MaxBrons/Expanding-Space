@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 55aca1e395073d54e876b58d889788ea
+guid: b7496d73ff30d9342b49710bed2c5120
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3203133569234612479
-    second: Alle_Dieren_0
+      213: 2391130292214326295
+    second: start scherm + logo game erop (1)_0
   - first:
-      213: -4192701443950215875
-    second: Alle_Dieren_1
+      213: -9180508290797953913
+    second: start scherm + logo game erop (1)_1
+  - first:
+      213: -4852818042479006347
+    second: start scherm + logo game erop (1)_2
+  - first:
+      213: -6449155248264807419
+    second: start scherm + logo game erop (1)_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -46,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -101,34 +107,76 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Alle_Dieren_0
+      name: start scherm + logo game erop (1)_0
       rect:
         serializedVersion: 2
-        x: 321
-        y: 851
-        width: 91
-        height: 135
+        x: 622
+        y: 455
+        width: 674
+        height: 83
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06716ac15a4acda43b79efb8553ade26
-      internalID: -3203133569234612479
+      spriteID: f89d127e93aff074799de451573fdf0b
+      internalID: 2391130292214326295
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alle_Dieren_1
+      name: start scherm + logo game erop (1)_1
       rect:
         serializedVersion: 2
-        x: 538
-        y: 851
-        width: 91
-        height: 129
+        x: 655
+        y: 190
+        width: 604
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6e9a88f95dd86408e61ccb61051b56
+      internalID: -9180508290797953913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: start scherm + logo game erop (1)_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 44
+        width: 138
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8d9ed5d5237c64ca417f71142f805a
+      internalID: -4852818042479006347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: start scherm + logo game erop (1)_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0923851bdae3ef446913a2feccc82c9d
-      internalID: -4192701443950215875
+      spriteID: 9a23ca8449e07474b9f942616dd33549
+      internalID: -6449155248264807419
       vertices: []
       indices: 
       edges: []
@@ -145,7 +193,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 356d3b75a45a4a247a5aadd0192d2cd8
+    spriteID: ed4758f73e264e14c969491835bebf42
     internalID: 0
     vertices: []
     indices: 

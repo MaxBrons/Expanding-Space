@@ -155,8 +155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.6815464, y: 0.12581483}
   m_AnchorMax: {x: 0.6815464, y: 0.12581483}
-  m_AnchoredPosition: {x: -12.540009, y: 2.2099915}
-  m_SizeDelta: {x: 138.77, y: 53.92}
+  m_AnchoredPosition: {x: -12.89, y: 1.5656}
+  m_SizeDelta: {x: 137.17, y: 50.54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &18624790
 MonoBehaviour:
@@ -234,7 +234,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 572684669127763351, guid: d55a3427f58f4954aa837b42d28e0eb5, type: 3}
+  m_Sprite: {fileID: 3085734439401562170, guid: 8ad844d6bc889674492392ff71df396f,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -654,8 +655,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: -8443971499841812337, guid: d55a3427f58f4954aa837b42d28e0eb5,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: d55a3427f58f4954aa837b42d28e0eb5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -705,10 +705,10 @@ RectTransform:
   m_Father: {fileID: 718501569}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.32542264, y: 0.12581483}
-  m_AnchorMax: {x: 0.32542264, y: 0.12581483}
-  m_AnchoredPosition: {x: -2.0100098, y: -0.6000061}
-  m_SizeDelta: {x: 153.38, y: 29.4}
+  m_AnchorMin: {x: 0.36148456, y: 0.12581483}
+  m_AnchorMax: {x: 0.36148456, y: 0.12581483}
+  m_AnchoredPosition: {x: -70.8, y: 1.5656}
+  m_SizeDelta: {x: 155.97, y: 27.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1687141739
 MonoBehaviour:
@@ -786,7 +786,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: -8598868933414046429, guid: d55a3427f58f4954aa837b42d28e0eb5,
+  m_Sprite: {fileID: 8326863682717707070, guid: 8ad844d6bc889674492392ff71df396f,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
