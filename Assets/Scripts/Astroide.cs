@@ -21,7 +21,7 @@ public class Astroide : MonoBehaviour
             Destroy(collision.gameObject); //Destroy the bullet that hit the enemy
             Instantiate(explosionPrefab, transform.position, Quaternion.identity); //Spawn in the explosion animation
             Instantiate(material, transform.position, Quaternion.identity); //Spawn in the material
-            Vector3 pos = new Vector3(Random.Range(20, 35), Random.Range(20, 35), 0);
+            Vector3 pos = new Vector3(Random.Range(40, 75), Random.Range(40, 75), 0);
             Instantiate(gameObject, pos, Quaternion.identity); // Spawn in a new astroid in a range of 40f to 50f from the player
             Destroy(transform.gameObject); //Destroy the object
         }

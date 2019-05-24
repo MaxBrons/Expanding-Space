@@ -28,6 +28,7 @@ public class playerController : MonoBehaviour
     {
         //Hides the cursor and lockes the cursor to the bounderies of the gamescreen
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         //Gets the player's transform
         player = GameObject.FindWithTag("Player").transform;
@@ -102,7 +103,11 @@ public class playerController : MonoBehaviour
                 health_Amount.text = health.ToString();
             }
             else
+            {
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
                 SceneManager.LoadScene(3);
+            }
         }
     } 
 }

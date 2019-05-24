@@ -32,10 +32,12 @@ public class enemyController : MonoBehaviour
             if (mayShoot)
                 StartCoroutine(Shoot());
 
-            anim.SetTrigger("Move");
+            if(anim)
+                anim.SetTrigger("Move");
         }
         else
-            anim.SetTrigger("Stop");
+            if (anim)
+                anim.SetTrigger("Stop");
     }
 
     //If you trigger the collider than the enemy will follow the player
