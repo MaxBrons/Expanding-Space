@@ -15,6 +15,7 @@ public class EnemyDeath : MonoBehaviour
         {
             Destroy(collision.gameObject); //Destroy the bullet that hit the enemy
             Instantiate(explosionPrefab, transform.position, Quaternion.identity); //Spawn in the explosion animation
+            gameObject.GetComponent<spriteDirection>().enabled = false;
             Destroy(transform.parent.gameObject); //Destroy the parent object, so that the intire enemy will be destroyed
         }
     }

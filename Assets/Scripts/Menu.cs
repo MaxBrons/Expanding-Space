@@ -1,22 +1,20 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
+    public Text timerTime;
+    private float timer = 10f;
+    public bool setTimer = false;
 
     public void PlayGame()
     {
         SceneManager.LoadScene(1);
     }
-
-    public void launch()
+    public void sceneChange(int i)
     {
-
-    }
-
-    public void continueToPlay()
-    {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(i);
     }
 
     public void Exit()
@@ -24,16 +22,18 @@ public class Menu : MonoBehaviour
         Application.Quit();
     }
 
-    
-    float timer = 5.0f;
-
-    void Update()
+    public void Update()
     {
-        timer -= Time.deltaTime;
-        
-        if(timer <= 0)
+        if (setTimer)
         {
-            SceneManager.LoadScene(0);
+            Cursor.lockState = CursorLockMode.None;
+            timer -= Time.deltaTime;
+            if (timerTime)
+                timerTime.text = Mathf.Round(timer).ToString();
+            if (timer <= 0)
+            {
+                SceneManager.LoadScene(0);
+            }
         }
     }
 }

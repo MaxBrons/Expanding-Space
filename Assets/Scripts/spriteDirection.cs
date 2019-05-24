@@ -4,13 +4,13 @@ public class spriteDirection : MonoBehaviour
 {
     SpriteRenderer targetSprite;
     public Sprite[] spritesArray; //Stores the 8 sprites needed for all 8 directions
-    GameObject target;
+    Transform target;
     public string targetName; //The tag of the target
 
     void Start()
     {
         //Stores the Gameobject with the given tag in target
-        target = GameObject.FindGameObjectWithTag(targetName);
+        target = transform.parent.Find(targetName);
 
         targetSprite = GetComponent<SpriteRenderer>();
     }

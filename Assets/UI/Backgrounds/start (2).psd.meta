@@ -1,13 +1,7 @@
 fileFormatVersion: 2
-guid: ce04531c18e366448b3f6f3103cad17a
+guid: 8183584e60b9afa439fcf687bee70f28
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -6805543798234258183
-    second: Schroot_en_kometen_0
-  - first:
-      213: 3633399226330894226
-    second: Schroot_en_kometen_1
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -46,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,77 +69,13 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Schroot_en_kometen_0
-      rect:
-        serializedVersion: 2
-        x: 1212
-        y: 741
-        width: 261
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bcb9871e66c076d45824068295d895b8
-      internalID: -6805543798234258183
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Schroot_en_kometen_1
-      rect:
-        serializedVersion: 2
-        x: 1487
-        y: 495
-        width: 149
-        height: 143
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fd5b978999327cf4fa1b5c6db9574739
-      internalID: 3633399226330894226
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0f7ac142fd33a6f4db9153c66bd0dd93
+    spriteID: 497dbb38d551d4440a96c87cdc61a2e8
     internalID: 0
     vertices: []
     indices: 

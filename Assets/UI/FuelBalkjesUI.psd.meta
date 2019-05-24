@@ -1,13 +1,22 @@
 fileFormatVersion: 2
-guid: ce04531c18e366448b3f6f3103cad17a
+guid: 8f3137cd199166842973e7c6fccc83c8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6805543798234258183
-    second: Schroot_en_kometen_0
+      213: 6875995135624349828
+    second: FuelBalkjesUI_0
   - first:
-      213: 3633399226330894226
-    second: Schroot_en_kometen_1
+      213: 3130693451679568557
+    second: FuelBalkjesUI_1
+  - first:
+      213: 7477226560631615232
+    second: FuelBalkjesUI_2
+  - first:
+      213: -1037314381854701290
+    second: FuelBalkjesUI_3
+  - first:
+      213: 7815508113540981658
+    second: FuelBalkjesUI_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -101,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Schroot_en_kometen_0
+      name: FuelBalkjesUI_0
       rect:
         serializedVersion: 2
-        x: 1212
-        y: 741
-        width: 261
-        height: 236
+        x: 22
+        y: 21
+        width: 334
+        height: 197
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcb9871e66c076d45824068295d895b8
-      internalID: -6805543798234258183
+      spriteID: 8f9b0f7b641dc064b8ee5197f700e2b1
+      internalID: 6875995135624349828
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Schroot_en_kometen_1
+      name: FuelBalkjesUI_1
       rect:
         serializedVersion: 2
-        x: 1487
-        y: 495
-        width: 149
-        height: 143
+        x: 422
+        y: 21
+        width: 334
+        height: 197
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,8 +145,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd5b978999327cf4fa1b5c6db9574739
-      internalID: 3633399226330894226
+      spriteID: de28290101bf7e94ebefacf95e65b2e6
+      internalID: 3130693451679568557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuelBalkjesUI_2
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 21
+        width: 334
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b911fb581c58b1342a9aca5eef291e54
+      internalID: 7477226560631615232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuelBalkjesUI_3
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 21
+        width: 334
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa961c51e20f6c441bcb6174d6f35fcc
+      internalID: -1037314381854701290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuelBalkjesUI_4
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 21
+        width: 334
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 391f5266e0ecb364da221cf851f43b38
+      internalID: 7815508113540981658
       vertices: []
       indices: 
       edges: []
@@ -145,7 +217,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0f7ac142fd33a6f4db9153c66bd0dd93
+    spriteID: 42efaedd50ab52b40987d75fc3340477
     internalID: 0
     vertices: []
     indices: 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class playerController : MonoBehaviour
 {
@@ -101,7 +102,7 @@ public class playerController : MonoBehaviour
                 health_Amount.text = health.ToString();
             }
             else
-                Debug.Log("You Died");
+                SceneManager.LoadScene(3);
         }
-    }
+    } 
 }
