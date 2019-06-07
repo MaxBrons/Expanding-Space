@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class playerController : MonoBehaviour
 {
+    public static playerController instance;
+
     Vector2 velocity = Vector2.zero;
     Vector2 force;
     Transform player;
@@ -13,14 +15,20 @@ public class playerController : MonoBehaviour
     public Text health_Amount;
     public Animator anim;
 
-    [SerializeField] private float health = 3;
+    
     [SerializeField] private float maxVelocity = 5f;
     [SerializeField] private float rotationSpeed = 20f;
     [SerializeField] private float acceleration = 1f;
     [SerializeField] private float WaitToNextShot = 1f;
-    [SerializeField] private float speed = 1f;
     [SerializeField] private float xMax = 0f, xMin = 0f, yMax = 0f, yMin = 0f;
-    
+    [SerializeField] private GameObject Upgrades;
+
+    public static float health = 3;
+    public static float speed = 1f;
+
+    public delegate void UpgradeMenuCallback(bool active);
+    public UpgradeMenuCallback onToggleUpgradeMenu;
+
     private bool mayShoot = true;
     private bool MayMoveNow = false;
 
@@ -109,5 +117,8 @@ public class playerController : MonoBehaviour
                 SceneManager.LoadScene(3);
             }
         }
-    } 
+    }
+
+    
+
 }

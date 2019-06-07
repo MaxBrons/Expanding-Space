@@ -7,6 +7,7 @@ public class Menu : MonoBehaviour
     public Text timerTime;
     private float timer = 10f;
     public bool setTimer = false;
+    
 
     public void PlayGame()
     {
@@ -36,4 +37,6 @@ public class Menu : MonoBehaviour
             }
         }
     }
+
+   
 }
