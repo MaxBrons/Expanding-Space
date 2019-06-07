@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4300285253122411492}
   m_Layer: 0
   m_Name: Astroide
-  m_TagString: Untagged
+  m_TagString: Astroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -6805543798234258183, guid: ce04531c18e366448b3f6f3103cad17a,
+  m_Sprite: {fileID: -422637570836880072, guid: da4f28d1cb52372418ac8ebe617da872,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

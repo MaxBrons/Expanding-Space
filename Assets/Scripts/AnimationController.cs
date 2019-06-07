@@ -3,20 +3,22 @@ using UnityEngine.SceneManagement;
 
 public class AnimationController : MonoBehaviour
 {
-    public Animator anim;
-    public Animator animFade;
+    public Animator Anim;
     private SpriteRenderer sr;
 
     public void Start()
     {
-          sr = GetComponent<SpriteRenderer>();
+        sr = GetComponent<SpriteRenderer>();
     }
-    private void FixedUpdate()
+
+    void FixedUpdate()
     {
         if (sr)
         {
+            //Sets the sorting layer of the engineburst to 0 if the player looks downwards
+            //Else the engine burst will be on top of the sprite
             var angle = transform.eulerAngles.z;
-            if (angle > 90 && angle < 270)
+            if (angle > 85 && angle < 265)
                 sr.sortingOrder = 0;
             else
                 sr.sortingOrder = 2;
@@ -24,27 +26,15 @@ public class AnimationController : MonoBehaviour
     }
     public void destruct()
     {
+        //This is for the destuction of the animation gameobject
         Destroy(gameObject);
     }
-    public void move()
-    {
-        anim.SetTrigger("Move");
-    }
-    public void moving()
-    {
-        anim.SetTrigger("Moving");
-    }
-    public void stop()
-    {
-        anim.SetTrigger("Stop");
-    }
-    public void launch()
-    {
-        anim.SetTrigger("Deploy");
-    }
+
     public void onAnimationDone(int i)
     {
         SceneManager.LoadScene(i);
     }
+
+
 
 }

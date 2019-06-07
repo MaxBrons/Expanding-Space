@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1488366227976713366}
   - component: {fileID: 2033194038014777486}
   - component: {fileID: 2465556949754651631}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bullet sprite
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -94,6 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  bulletImpact: {fileID: 4124536588868291816, guid: 1b3ea93ecf7f58c46978f548a988fe5f,
+    type: 3}
 --- !u!58 &2465556949754651631
 CircleCollider2D:
   m_ObjectHideFlags: 0

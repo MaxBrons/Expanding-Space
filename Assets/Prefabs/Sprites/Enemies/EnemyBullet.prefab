@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1366063038610985466}
   - component: {fileID: 4525967001527304395}
   - component: {fileID: 3296274160375206479}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EnemyBullet
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  bulletImpact: {fileID: 4124536588868291816, guid: 1b3ea93ecf7f58c46978f548a988fe5f,
+    type: 3}
 --- !u!212 &4525967001527304395
 SpriteRenderer:
   m_ObjectHideFlags: 0

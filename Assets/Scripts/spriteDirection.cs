@@ -15,6 +15,11 @@ public class spriteDirection : MonoBehaviour
         targetSprite = GetComponent<SpriteRenderer>();
     }
 
+    private void Update()
+    {
+        this.transform.position = target.position;
+    }
+
     void FixedUpdate()
     {
         //Checkes for the state of the players rotation

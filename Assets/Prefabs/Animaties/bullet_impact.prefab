@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3830726838788611212}
   - component: {fileID: 6522265308508100041}
   - component: {fileID: 2477833998783797400}
+  - component: {fileID: 6887990089735386996}
   m_Layer: 0
   m_Name: bullet_impact
   m_TagString: Untagged
@@ -99,3 +100,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6887990089735386996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4124536588868291816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 036011b1cff0b6e4a9e8ef93a515fbfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Anim: {fileID: 2477833998783797400}

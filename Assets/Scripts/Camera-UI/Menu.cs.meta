@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0203cc6eceb75724ab474a14ad0a6d70
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - timerTime: {instanceID: 0}
+  - FadeOut: {fileID: 9039877885643489782, guid: 27c2245069f25ed428c651b8e689e39d,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
