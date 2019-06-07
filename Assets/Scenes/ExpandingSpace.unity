@@ -193,16 +193,15 @@ MonoBehaviour:
     type: 3}
   health_Amount: {fileID: 1069891973}
   anim: {fileID: 564871171}
-  health: 3
   maxVelocity: 13
   rotationSpeed: 50
   acceleration: 3
   WaitToNextShot: 0.7
-  speed: 2.5
   xMax: 400
   xMin: -400
   yMax: 400
   yMin: -400
+  Upgrades: {fileID: 0}
 --- !u!4 &44280384
 Transform:
   m_ObjectHideFlags: 0
@@ -1347,7 +1346,7 @@ Animator:
   m_GameObject: {fileID: 990302705}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ed8b39edbfd808f4e80b83571e72f49f, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
