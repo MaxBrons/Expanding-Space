@@ -26,9 +26,6 @@ public class playerController : MonoBehaviour
     public static float health = 3;
     public static float speed = 1f;
 
-    public delegate void UpgradeMenuCallback(bool active);
-    public UpgradeMenuCallback onToggleUpgradeMenu;
-
     private bool mayShoot = true;
     private bool MayMoveNow = false;
 
