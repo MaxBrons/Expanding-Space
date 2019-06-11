@@ -10,19 +10,19 @@ public class Menu : MonoBehaviour
 
     public GameObject FadeOut;
 
-    public void PlayGame()
-    {
-        SceneManager.LoadScene(1);
-    }
-    public void sceneChange(int i)
+    public void PlayGame(int i)
     {
         SceneManager.LoadScene(i);
+    }
+    public void sceneChange()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void fadeAnimPlay()
     {
-        //if(FadeOut)
-          Instantiate(FadeOut);
+        if(FadeOut)
+            Instantiate(FadeOut);
     }
 
     public void Exit()

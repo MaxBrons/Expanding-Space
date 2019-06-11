@@ -35,6 +35,8 @@ public class AnimationController : MonoBehaviour
         SceneManager.LoadScene(i);
     }
 
-
-
+    public void triggerSet(string trigger)
+    {
+        Anim.SetTrigger(trigger);
+    }
 }

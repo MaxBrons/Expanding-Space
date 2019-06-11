@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.6815464, y: 0.12581483}
   m_AnchorMax: {x: 0.6815464, y: 0.12581483}
-  m_AnchoredPosition: {x: -12.89, y: 1.5656}
+  m_AnchoredPosition: {x: -12.890015, y: 1.5656128}
   m_SizeDelta: {x: 137.17, y: 50.54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &18624790
@@ -202,7 +202,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 718501570}
-        m_MethodName: sceneChange
+        m_MethodName: PlayGame
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -598,6 +598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerTime: {fileID: 62800466}
   setTimer: 1
+  FadeOut: {fileID: 0}
 --- !u!1 &1677235953
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,7 +708,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.36148456, y: 0.12581483}
   m_AnchorMax: {x: 0.36148456, y: 0.12581483}
-  m_AnchoredPosition: {x: -70.8, y: 1.5656}
+  m_AnchoredPosition: {x: -70.79999, y: 1.5656128}
   m_SizeDelta: {x: 155.97, y: 27.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1687141739
@@ -754,7 +755,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 718501570}
-        m_MethodName: sceneChange
+        m_MethodName: PlayGame
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

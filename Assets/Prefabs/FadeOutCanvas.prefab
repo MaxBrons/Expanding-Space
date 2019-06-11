@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2988279222148356796}
   - component: {fileID: 8632433489553089430}
   - component: {fileID: 5110035849147702364}
+  - component: {fileID: 8914451619995950358}
   m_Layer: 5
   m_Name: FadeOut
   m_TagString: Untagged
@@ -114,6 +115,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Anim: {fileID: 8632433489553089430}
+--- !u!114 &8914451619995950358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548002583287575700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0203cc6eceb75724ab474a14ad0a6d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerTime: {fileID: 0}
+  setTimer: 0
+  FadeOut: {fileID: 0}
 --- !u!1 &986134797815138771
 GameObject:
   m_ObjectHideFlags: 0

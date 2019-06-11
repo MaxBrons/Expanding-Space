@@ -77,7 +77,6 @@ public class playerController : MonoBehaviour
 
             //Lowers the amount of feul when moving
             UI.feul -= Time.deltaTime / 5;
-            Debug.Log(UI.feul);
         }
 
         //You shoot when the left mouse button is pressed

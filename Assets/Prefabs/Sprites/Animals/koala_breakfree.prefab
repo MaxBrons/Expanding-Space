@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7190695800701915600}
   - component: {fileID: 4582174839215653187}
   - component: {fileID: 1623883698925242126}
+  - component: {fileID: 206430322455296465}
   m_Layer: 0
   m_Name: koala_breakfree
   m_TagString: Untagged
@@ -100,3 +101,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &206430322455296465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5763779403325139213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a046fba228163234c8d4e91dd65a2f72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimalAnim: {fileID: 0}
+  notAnim: 0

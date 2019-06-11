@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5792177574583218947}
   - component: {fileID: 7693013486873380828}
+  - component: {fileID: -8126743775254991389}
+  - component: {fileID: 5277220098977532954}
   m_Layer: 0
   m_Name: Koala_glass
   m_TagString: Untagged
@@ -80,3 +82,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-8126743775254991389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5354541834842962204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a046fba228163234c8d4e91dd65a2f72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimalAnim: {fileID: 5763779403325139213, guid: 0e496610dbc760449a6bd1fe6a0affea,
+    type: 3}
+  notAnim: 1
+--- !u!61 &5277220098977532954
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5354541834842962204}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.000000059604645, y: 0.19283485}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.9, y: 2.24}
+    newSize: {x: 1.9, y: 2.24}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5844516, y: 1.6439652}
+  m_EdgeRadius: 0
