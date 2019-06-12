@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class playerController : MonoBehaviour
 {
-    public static playerController instance;
 
     Vector2 velocity = Vector2.zero;
     Vector2 force;
@@ -119,7 +118,4 @@ public class playerController : MonoBehaviour
             }
         }
     }
-
-    
-
 }

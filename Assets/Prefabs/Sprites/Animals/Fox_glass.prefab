@@ -96,6 +96,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AnimalAnim: {fileID: 2437599024794603111, guid: a83c2aee561db4f4e92c18ab64d5a964,
     type: 3}
+  foxGO: {fileID: 8840995450867382272}
+  koalaGO: {fileID: 0}
+  pandaGO: {fileID: 0}
+  penguinGO: {fileID: 0}
   notAnim: 1
 --- !u!61 &2213000402428494345
 BoxCollider2D:

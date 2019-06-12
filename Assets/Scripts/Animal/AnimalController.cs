@@ -4,19 +4,20 @@ public class AnimalController : MonoBehaviour
 {
 
     public GameObject AnimalAnim;
+
     public GameObject foxGO, koalaGO, pandaGO, penguinGO;
     public static bool fox = false, koala = false, panda = false, penguin = false;
     [SerializeField] private bool notAnim = true;
 
-    private void start()
+    private void Start()
     {
-        if (foxGO && fox == true)
+        if (foxGO && fox)
             foxGO.SetActive(true);
-        if (koalaGO && koala == true)
+        if (koalaGO && koala)
             koalaGO.SetActive(true);
-        if (pandaGO && panda == true)
+        if (pandaGO && panda)
             pandaGO.SetActive(true);
-        if (penguinGO && penguin == true)
+        if (penguinGO && penguin)
             penguinGO.SetActive(true);
     }
 
@@ -26,6 +27,7 @@ public class AnimalController : MonoBehaviour
         if (collision.gameObject.tag == "Bullet" && notAnim && AnimalAnim)
         {
             Instantiate(AnimalAnim, transform.position, Quaternion.identity);
+            fox = true;
             Destroy(transform.gameObject);
         }
     }
@@ -34,6 +36,4 @@ public class AnimalController : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
-
 }

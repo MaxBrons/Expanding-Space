@@ -4,6 +4,7 @@ public class Astroide : MonoBehaviour
 {
     public GameObject explosionPrefab;
     public GameObject material;
+    [SerializeField] private float range = 0f;
 
     private void Update()
     {
@@ -19,9 +20,20 @@ public class Astroide : MonoBehaviour
             Destroy(collision.gameObject); //Destroy the bullet that hit the enemy
             Instantiate(explosionPrefab, transform.position, Quaternion.identity); //Spawn in the explosion animation
             Instantiate(material, transform.position, Quaternion.identity); //Spawn in the material
-            Vector3 pos = new Vector3(Random.Range(80, 120), Random.Range(80, 120), 0);
-            Instantiate(gameObject, pos, Quaternion.identity); // Spawn in a new astroid in a range of 40f to 50f from the player
+
+            // Spawn in a new astroid in a range from the player
+            var randomPos = (Vector3)Random.insideUnitCircle * range;
+            randomPos += transform.position;
+            Instantiate(gameObject, randomPos, transform.rotation);
+
             Destroy(transform.gameObject); //Destroy the object
         }
+    }
+
+    public void Spawn()
+    {
+        var randomPos = (Vector3)Random.insideUnitCircle * 10;
+        randomPos += transform.position;
+        Instantiate(gameObject, randomPos, transform.rotation);
     }
 }
