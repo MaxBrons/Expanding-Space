@@ -114,7 +114,7 @@ public class playerController : MonoBehaviour
             {
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene(2);
             }
         }
     }
