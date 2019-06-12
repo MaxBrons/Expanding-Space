@@ -201,7 +201,7 @@ MonoBehaviour:
   xMin: -400
   yMax: 400
   yMin: -400
-  Upgrades: {fileID: 0}
+  FadeOut: {fileID: 986134797815138771, guid: 202c2f2a59ee5964eb80b70cc5283839, type: 3}
 --- !u!4 &44280384
 Transform:
   m_ObjectHideFlags: 0
@@ -1801,6 +1801,7 @@ MonoBehaviour:
   - {fileID: 7815508113540981658, guid: 8f3137cd199166842973e7c6fccc83c8, type: 3}
   feulbar: {fileID: 1568577543}
   materialText: {fileID: 1867252467}
+  fadeOut: {fileID: 986134797815138771, guid: 202c2f2a59ee5964eb80b70cc5283839, type: 3}
 --- !u!1 &1069891971
 GameObject:
   m_ObjectHideFlags: 0

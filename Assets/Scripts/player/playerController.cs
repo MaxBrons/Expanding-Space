@@ -20,7 +20,7 @@ public class playerController : MonoBehaviour
     [SerializeField] private float acceleration = 1f;
     [SerializeField] private float WaitToNextShot = 1f;
     [SerializeField] private float xMax = 0f, xMin = 0f, yMax = 0f, yMin = 0f;
-    [SerializeField] private GameObject Upgrades;
+    public GameObject FadeOut;
 
     public static float health = 3;
     public static float speed = 1f;
@@ -114,7 +114,7 @@ public class playerController : MonoBehaviour
             {
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
-                SceneManager.LoadScene(2);
+                Instantiate(FadeOut);
             }
         }
     }

@@ -29,11 +29,4 @@ public class Astroide : MonoBehaviour
             Destroy(transform.gameObject); //Destroy the object
         }
     }
-
-    public void Spawn()
-    {
-        var randomPos = (Vector3)Random.insideUnitCircle * 10;
-        randomPos += transform.position;
-        Instantiate(gameObject, randomPos, transform.rotation);
-    }
 }

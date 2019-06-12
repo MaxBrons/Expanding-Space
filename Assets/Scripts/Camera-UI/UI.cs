@@ -11,7 +11,12 @@ public class UI : MonoBehaviour
     public static float feul = 100;
     public static float materials = 0;
     public Text materialText;
+    public GameObject fadeOut;
 
+    private void Start()
+    {
+        feul = 100;
+    }
 
     void FixedUpdate()
     {
@@ -19,8 +24,11 @@ public class UI : MonoBehaviour
         allEnemiesInScene.text = "Enemies: " + enemyCounter.ToString();
         materialText.text = materials.ToString();
 
-        if (enemyCounter == 0)
-            SceneManager.LoadScene(1);
+        if (enemyCounter == 0 && fadeOut)
+        {
+            Menu.cameraPosBool = true;
+            Instantiate(fadeOut);
+        }
 
         if (Feulbars.Length != 0)
             FeulDrainage();
@@ -40,7 +48,7 @@ public class UI : MonoBehaviour
         else if (feul <= 0)
         {
             feulbar.sprite = Feulbars[4];
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
     }
 
