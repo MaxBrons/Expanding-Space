@@ -14,7 +14,9 @@ public class Upgrades : MonoBehaviour
             UI.materials -= 1;
         }
         else
+        {
             Debug.Log("You got no money");
+        }   
     }
 
     //speed upgrade 
@@ -28,7 +30,9 @@ public class Upgrades : MonoBehaviour
             UI.materials -= 1;
         }
         else
-            Debug.Log("You got no money");      
+        {
+            Debug.Log("You got no money");
+        }   
     }
 
 
@@ -43,6 +47,8 @@ public class Upgrades : MonoBehaviour
             UI.materials -= 1;
         }
         else
+        {
             Debug.Log("You got no money");
+        }
     }
 }
