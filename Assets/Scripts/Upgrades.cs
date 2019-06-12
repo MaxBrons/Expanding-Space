@@ -5,33 +5,58 @@ using System.Collections.Generic;
 
 public class Upgrades : MonoBehaviour
 {
-    public playerController upgrade;
-    private GameObject player;
-
-    public static Upgrades upgrades;
-    private playerController stats;
-
-    
-    // je verbindt naar playerController
-    void Start()
-    {
-        player = GameObject.Find("Player");
-        upgrade = player.GetComponent<playerController>();
-    }
-
+   
     //hier upgrade je je health
     // je voegt 1 punt toe aan de health
+    // er wordt 1 van de Resources af gehaald
     public void UpgradeHealth()
     {
-        playerController.health += 1;
-        // probleem ik zie bij de onClick <Missing Upgrades.UpgradeHealth> geen iedee hoe dit komt.
+        if (UI.materials > 0)
+        {
+            playerController.health += 1;
+            UI.materials -= 1;
+        }
+        else
+        {
+            Debug.Log("You got no money");
+           
+        }
     }
 
     //speed upgrade 
-    //je voegt er een punt aan toe
+    //je voegt 1 punt toe aan de speed
+    // er wordt 1 van de Resources af gehaald
     public void UpgradeSpeed()
     {
-        playerController.speed += 1;
-        //probleem ik zie bij de OnClick <Missing Upgrades.UpgradeSpeed> geen iedee hoe dit komt.
+        if (UI.materials > 0)
+        {
+            playerController.speed += 1;
+            UI.materials -= 1;
+        }
+        else
+        {
+            Debug.Log("You got no money"
+        }
+
+        
     }
+
+
+    //Shield upgrade 
+    //je voegt 1 punt toe aan de shield
+    // er wordt 1 van de Resources af gehaald
+    public void UpgradeShield()
+    {
+        if(UI.materials > 0) {
+            playerController.shield += 1;
+
+            UI.materials -= 1;
+        }
+        else
+        {
+            Debug.Log("You got no money"
+        }
+    }
+
+
 }

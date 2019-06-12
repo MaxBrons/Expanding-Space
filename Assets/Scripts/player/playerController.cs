@@ -25,6 +25,7 @@ public class playerController : MonoBehaviour
 
     public static float health = 3;
     public static float speed = 1f;
+    public static float shield = 1;
 
     private bool mayShoot = true;
     private bool MayMoveNow = false;
