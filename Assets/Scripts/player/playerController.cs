@@ -14,6 +14,8 @@ public class playerController : MonoBehaviour
     public Text health_Amount;
     public Animator anim;
 
+    public AudioSource Death;
+
     
     [SerializeField] private float maxVelocity = 5f;
     [SerializeField] private float acceleration = 1f;
@@ -35,6 +37,8 @@ public class playerController : MonoBehaviour
 
         //Sets the UI element of the player's health to the variable health
         health_Amount.text = health.ToString();
+
+        Death = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -87,6 +91,7 @@ public class playerController : MonoBehaviour
         //You shoot when the left mouse button is pressed
         if (Input.GetButtonDown("Fire1") && mayShoot)
             StartCoroutine(Shoot());
+       
 
         //Forces the player to stay in a surtant play area
         transform.position = new Vector2(
@@ -112,6 +117,7 @@ public class playerController : MonoBehaviour
         //bullet and damage the player
         if (collision.gameObject.tag == "EnemyBullet")
         {
+            Death.Play();
             Destroy(collision.gameObject);
             if (health > 1)
             {
