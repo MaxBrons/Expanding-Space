@@ -16,7 +16,6 @@ public class playerController : MonoBehaviour
 
     
     [SerializeField] private float maxVelocity = 5f;
-    [SerializeField] private float rotationSpeed = 20f;
     [SerializeField] private float acceleration = 1f;
     [SerializeField] private float WaitToNextShot = 1f;
     [SerializeField] private float xMax = 0f, xMin = 0f, yMax = 0f, yMin = 0f;
@@ -31,10 +30,6 @@ public class playerController : MonoBehaviour
 
     void Start()
     {
-        //Hides the cursor and lockes the cursor to the bounderies of the gamescreen
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-
         //Gets the player's transform
         player = GameObject.FindWithTag("Player").transform;
 
@@ -44,9 +39,22 @@ public class playerController : MonoBehaviour
 
     void Update()
     {
-        //Sets the rotation of the player to the x position of the mouse
-        float rotation = -Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
-        transform.Rotate(0, 0, rotation);
+        //Sets the rotation of the player to the position of the mouse
+        if(Camera.main)
+        {   
+            //Gets the position off the player
+            Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition + Vector3.forward * 10f);
+
+            //Sets the rotation off the player to the mouse position
+            float angle = AngleBetweenPoints(transform.position, mouseWorldPosition);
+            transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle + 90));
+
+            //Returns the angle between the player and the cursor
+            float AngleBetweenPoints(Vector2 a, Vector2 b)
+            {
+                return Mathf.Atan2(a.y - b.y, a.x - b.x) * Mathf.Rad2Deg;
+            }
+        }
 
         //If the W key is pressed trigger the player's movement
         //You stop the trigger when the W key is released
@@ -111,11 +119,7 @@ public class playerController : MonoBehaviour
                 health_Amount.text = health.ToString();
             }
             else
-            {
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
                 Instantiate(FadeOut);
-            }
         }
     }
 }

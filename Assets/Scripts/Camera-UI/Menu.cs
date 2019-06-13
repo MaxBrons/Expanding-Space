@@ -20,6 +20,10 @@ public class Menu : MonoBehaviour
     //For the fade animation
     public GameObject FadeOut;
 
+    //For the garage
+    public GameObject garageGO, garageAnim, garageAnimBackwards;
+    public Animator anim;
+
     //Set the camera position to a set position when a specific button is pressed
     public static bool cameraPosBool = false;
 
@@ -84,8 +88,23 @@ public class Menu : MonoBehaviour
         mayMoveToBase = true;
     }
 
+    //Sets the camera's position to the position of the Base
     public void SetCamPos()
     {
         cameraPosBool = true;
+    }
+
+    public void Garage(bool garageDoor)
+    {
+        if (garageDoor && garageAnim)
+        {
+            Instantiate(garageAnim);
+            garageGO.SetActive(true);
+        }
+        else if (!garageDoor && garageAnimBackwards)
+        {
+            Instantiate(garageAnimBackwards);
+            garageDoor = false;
+        }
     }
 }
