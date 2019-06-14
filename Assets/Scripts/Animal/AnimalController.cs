@@ -6,7 +6,7 @@ public class AnimalController : MonoBehaviour
     public GameObject AnimalAnim;
 
     public GameObject foxGO, koalaGO, pandaGO, penguinGO;
-    public static bool fox = false, koala = false, panda = false, penguin = false;
+    public static bool fox = true, koala = true, panda = true, penguin = true;
     [SerializeField] private bool notAnim = true;
 
     private void Start()

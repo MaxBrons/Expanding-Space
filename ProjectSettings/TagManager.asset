@@ -10,6 +10,12 @@ TagManager:
   - EnemyBullet
   - Astroid
   - PlayerSprite
+  - Garage
+  - PetStation
+  - Koala
+  - Fox
+  - Panda
+  - Penguin
   layers:
   - Default
   - TransparentFX

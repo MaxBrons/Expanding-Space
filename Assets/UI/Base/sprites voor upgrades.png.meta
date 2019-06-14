@@ -1,7 +1,34 @@
 fileFormatVersion: 2
 guid: dfca62d81d3e3154fb4e3979e3c1d1f2
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3355150689612291227
+    second: sprites voor upgrades_0
+  - first:
+      213: 4598819319869952346
+    second: sprites voor upgrades_1
+  - first:
+      213: 7171988968922890131
+    second: sprites voor upgrades_2
+  - first:
+      213: -1250985865093454198
+    second: sprites voor upgrades_3
+  - first:
+      213: -3769419245390181959
+    second: sprites voor upgrades_4
+  - first:
+      213: 7209499175876401066
+    second: sprites voor upgrades_5
+  - first:
+      213: 5405015822264889826
+    second: sprites voor upgrades_6
+  - first:
+      213: 6828634218047598153
+    second: sprites voor upgrades_7
+  - first:
+      213: -5850629777032163492
+    second: sprites voor upgrades_8
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -31,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +67,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,9 +96,220 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sprites voor upgrades_0
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 462
+        width: 216
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96cc0a49d95b5fa47ab2a8bc141acd19
+      internalID: 3355150689612291227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprites voor upgrades_1
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 816
+        width: 172
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29aec7aa4ef145d4e80d7cfbc3671993
+      internalID: 4598819319869952346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprites voor upgrades_2
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 596
+        width: 160
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec5d218c0da23f4d8e9cd57eb20efdc
+      internalID: 7171988968922890131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprites voor upgrades_3
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 382
+        width: 156
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cfd911cc6833ee40928c44ec940c5e3
+      internalID: -1250985865093454198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprites voor upgrades_4
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 164
+        width: 132
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e266392483f0f144b5a51d59c17e657
+      internalID: -3769419245390181959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprites voor upgrades_5
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 828
+        width: 346
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b3cd89a21ea65649a195067152254aa
+      internalID: 7209499175876401066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprites voor upgrades_6
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 667
+        width: 290
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01e1e4ae508cd949883be28cb6aad55
+      internalID: 5405015822264889826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprites voor upgrades_7
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 438
+        width: 315
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fd57c433eb70cb49b063448d789a5ad
+      internalID: 6828634218047598153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprites voor upgrades_8
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 219
+        width: 361
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61ac8732710ac44686367bef43ecfb4
+      internalID: -5850629777032163492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

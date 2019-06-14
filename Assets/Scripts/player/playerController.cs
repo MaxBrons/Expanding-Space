@@ -26,6 +26,7 @@ public class playerController : MonoBehaviour
     public static float health = 3;
     public static float speed = 1f;
     public static float shield = 1;
+    public static float damage = 1;
 
     private bool mayShoot = true;
     private bool MayMoveNow = false;
@@ -34,6 +35,7 @@ public class playerController : MonoBehaviour
     {
         //Gets the player's transform
         player = GameObject.FindWithTag("Player").transform;
+        health = 3;
 
         //Sets the UI element of the player's health to the variable health
         health_Amount.text = health.ToString();
@@ -106,6 +108,14 @@ public class playerController : MonoBehaviour
         //Spawns in the bullet
         Instantiate(bulletBullet, transform.position, transform.rotation);
 
+        //If the player's damage is upgraded, the player will shoot 2 bullets instead of one
+        if (damage > 1)
+        {
+            yield return new WaitForSeconds(1);
+            //Spawns in the bullet
+            Instantiate(bulletBullet, transform.position, transform.rotation);
+        }
+            
         //Prevents you from shooting to rapid
         yield return new WaitForSeconds(WaitToNextShot);
         mayShoot = true;
