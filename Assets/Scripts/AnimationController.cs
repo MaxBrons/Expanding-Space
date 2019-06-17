@@ -11,7 +11,6 @@ public class AnimationController : MonoBehaviour
     public GameObject garageGO, petGO, garageAnim, garageAnim2, petAnim, petAnim2, garageOpen;
     public Text MissionText;
     public static float missionNumber = 1;
-    public Text[] AnimalInfoText;
 
     public void Start()
     {
@@ -78,22 +77,6 @@ public class AnimationController : MonoBehaviour
     {
         Instantiate(garageOpen);
         Instantiate(petGO);
-    }
-
-    public void PetInfoText(string animalName)
-    {
-        for (int i = 0; i < AnimalInfoText.Length; i++)
-            AnimalInfoText[i].GetComponent<Text>().enabled = false;
-
-        if (animalName == "Fox")
-            AnimalInfoText[0].GetComponent<Text>().enabled = true;
-        else if (animalName == "Koala")
-            AnimalInfoText[1].GetComponent<Text>().enabled = true;
-        else if (animalName == "Panda")
-            AnimalInfoText[2].GetComponent<Text>().enabled = true;
-        else if (animalName == "Penguin")
-            AnimalInfoText[3].GetComponent<Text>().enabled = true;
-
     }
 
     public void Exit(string tag)

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class AnimalController : MonoBehaviour
 {
@@ -6,7 +7,8 @@ public class AnimalController : MonoBehaviour
     public GameObject AnimalAnim;
 
     public GameObject foxGO, koalaGO, pandaGO, penguinGO;
-    public static bool fox = true, koala = true, panda = true, penguin = true;
+    public static bool fox = false, koala = false, panda = false, penguin = false;
+    public Text[] AnimalText;
     [SerializeField] private bool notAnim = true;
 
     private void Start()
@@ -35,5 +37,16 @@ public class AnimalController : MonoBehaviour
     void destructAnimalAnim()
     {
         Destroy(gameObject);
+    }
+
+    public void ShowAnimalText(int animalTextInt)
+    {
+        if(AnimalText.Length != 0)
+        {
+            for (int i = 0; i < AnimalText.Length; i++)
+                AnimalText[i].GetComponent<Text>().enabled = false;
+
+            AnimalText[animalTextInt].GetComponent<Text>().enabled = true;
+        }
     }
 }
