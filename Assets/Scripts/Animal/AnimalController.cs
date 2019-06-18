@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class AnimalController : MonoBehaviour
 {
+    public AudioManager audioManager;
 
     public GameObject AnimalAnim;
 
@@ -28,6 +29,7 @@ public class AnimalController : MonoBehaviour
         //Spawns in the animation object of the animal
         if (collision.gameObject.tag == "Bullet" && notAnim && AnimalAnim)
         {
+            audioManager.PlayAudio(0);
             Instantiate(AnimalAnim, transform.position, Quaternion.identity);
             fox = true;
             Destroy(transform.gameObject);

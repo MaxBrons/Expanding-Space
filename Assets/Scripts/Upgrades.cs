@@ -18,7 +18,7 @@ public class Upgrades : MonoBehaviour
     // er wordt 1 van de Resources af gehaald
     public void UpgradeHealth()
     {
-        if (UI.materials > 0)
+        if (UI.materials >= cost)
         {
             playerController.health += 1;
             UI.materials -= cost;
@@ -32,7 +32,7 @@ public class Upgrades : MonoBehaviour
     // er wordt 1 van de Resources af gehaald
     public void UpgradeSpeed()
     {
-        if (UI.materials > 0)
+        if (UI.materials >= cost)
         {
             playerController.speed += 1;
             UI.materials -= cost;
@@ -46,7 +46,7 @@ public class Upgrades : MonoBehaviour
     // er wordt 1 van de Resources af gehaald
     public void UpgradeShield()
     {
-        if(UI.materials > 0) {
+        if(UI.materials >= cost) {
             playerController.shield += 1;
 
             UI.materials -= cost;
@@ -62,7 +62,7 @@ public class Upgrades : MonoBehaviour
         //Only upgrades the damage if the players damage is not already upgraded
         if(playerController.damage < 2)
         {
-            if (UI.materials > 0)
+            if (UI.materials >= cost)
             {
                 playerController.damage += 1;
 

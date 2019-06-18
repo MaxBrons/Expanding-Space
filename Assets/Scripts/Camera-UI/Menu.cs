@@ -17,6 +17,9 @@ public class Menu : MonoBehaviour
 
     bool mayMoveToBase = false;
 
+    //Audiomanager
+    public AudioManager audioManager;
+
     //For the fade animation
     public GameObject FadeOut;
 
@@ -39,12 +42,15 @@ public class Menu : MonoBehaviour
     {
         if (setTimer)
         {
+            //If the timer runs out, the player will automatically to Main Menu
+            //and the background sound changes
             Cursor.lockState = CursorLockMode.None;
             timer -= Time.deltaTime;
             if (timerTime)
                 timerTime.text = Mathf.Round(timer).ToString();
             if (timer <= 0)
             {
+                audioManager.PlayAudio(5);
                 SceneManager.LoadScene(0);
             }
         }

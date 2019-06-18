@@ -6,6 +6,8 @@ public class enemyController : MonoBehaviour
     public GameObject player;
     public GameObject bulletBullet;
 
+    public AudioManager audioManager;
+
     [SerializeField] private float speed = 0.05f;
     [SerializeField] private float WaitToNextShot = 1f;
 
@@ -49,6 +51,7 @@ public class enemyController : MonoBehaviour
 
     public IEnumerator Shoot()
     {
+        audioManager.PlayAudio(13);
         mayShoot = false;
         //Spawn in the bullet
         Instantiate(bulletBullet, transform.position, transform.rotation);

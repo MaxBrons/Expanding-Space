@@ -14,7 +14,7 @@ public class playerController : MonoBehaviour
     public Text health_Amount;
     public Animator anim;
 
-    public AudioSource Death;
+    public AudioManager audioManager;
 
     
     [SerializeField] private float maxVelocity = 5f;
@@ -39,8 +39,6 @@ public class playerController : MonoBehaviour
 
         //Sets the UI element of the player's health to the variable health
         health_Amount.text = health.ToString();
-
-        Death = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -108,12 +106,15 @@ public class playerController : MonoBehaviour
         //Spawns in the bullet
         Instantiate(bulletBullet, transform.position, transform.rotation);
 
+        audioManager.PlayAudio(13);
+
         //If the player's damage is upgraded, the player will shoot 2 bullets instead of one
         if (damage > 1)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(1/3 * 2);
             //Spawns in the bullet
             Instantiate(bulletBullet, transform.position, transform.rotation);
+            audioManager.PlayAudio(13);
         }
             
         //Prevents you from shooting to rapid
@@ -127,15 +128,18 @@ public class playerController : MonoBehaviour
         //bullet and damage the player
         if (collision.gameObject.tag == "EnemyBullet")
         {
-            Death.Play();
             Destroy(collision.gameObject);
             if (health > 1)
             {
+                audioManager.PlayAudio(9);
                 health--;
                 health_Amount.text = health.ToString();
             }
             else
+            {
+                audioManager.PlayAudio(11);
                 Instantiate(FadeOut);
+            }
         }
     }
 }
