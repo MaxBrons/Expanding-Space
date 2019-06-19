@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 public class UI : MonoBehaviour
 {
     public Text allEnemiesInScene;
-    private float enemyCounter = 0;
+    private float enemyCounter = 0,AmountOfFeul = 100;
+    private int SpriteArrayIndex = 12;
     public Sprite[] Feulbars;
     public Image feulbar;
     public static float feul = 100;
@@ -13,9 +14,9 @@ public class UI : MonoBehaviour
     public Text materialText;
     public GameObject fadeOut;
 
-    private void Start()
+    void Start()
     {
-        feul = 100;
+        SpriteArrayIndex = Feulbars.Length;
     }
 
     void FixedUpdate()
@@ -37,19 +38,16 @@ public class UI : MonoBehaviour
     //Changes the sprite of the feulbar when the fuel drops below a point
     public void FeulDrainage()
     {
-        if (feul > 75)
-            feulbar.sprite = Feulbars[0];
-        else if (feul < 75 && feul > 50)
-            feulbar.sprite = Feulbars[1];
-        else if (feul < 50 && feul > 25)
-            feulbar.sprite = Feulbars[2];
-        else if (feul < 25 && feul > 0)
-            feulbar.sprite = Feulbars[3];
-        else if (feul <= 0)
+        if(feul <= AmountOfFeul)
         {
-            feulbar.sprite = Feulbars[4];
-            SceneManager.LoadScene(2);
+            SpriteArrayIndex -= 1;
+            AmountOfFeul -= 7.7f;
+            feulbar.sprite = Feulbars[SpriteArrayIndex];
+        }
+        if (feul <= 0)
+        {
+            feulbar.sprite = Feulbars[Feulbars.Length];
+            Instantiate(fadeOut);
         }
     }
-
 }

@@ -119,6 +119,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8511340877599365380, guid: 8f1a7aacc3e9b764baebb3c2ea17d762,
     type: 3}
+  FXAudioManager: {fileID: 7175207972978261791, guid: c5cf1e660ef16fb48a5fee747e0c3f02,
+    type: 3}
 --- !u!50 &421415695585488027
 Rigidbody2D:
   serializedVersion: 4
@@ -219,6 +221,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   bulletBullet: {fileID: 9102501684493065977, guid: 14791d245a272cd4aa20bfe4ba9404dd,
+    type: 3}
+  FXAudioManager: {fileID: 7175207972978261791, guid: c5cf1e660ef16fb48a5fee747e0c3f02,
     type: 3}
   speed: 3
   WaitToNextShot: 4

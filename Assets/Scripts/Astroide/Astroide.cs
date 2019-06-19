@@ -6,7 +6,7 @@ public class Astroide : MonoBehaviour
     public GameObject material;
     [SerializeField] private float range = 0f;
 
-    public AudioManager audioManager;
+    public AudioManager FXAudioManager;
 
     private void Update()
     {
@@ -19,7 +19,7 @@ public class Astroide : MonoBehaviour
         //bullet and the astroide and spawn materials in
         if (collision.gameObject.tag == "Bullet")
         {
-            audioManager.PlayAudio(1);
+            FXAudioManager.FXAudio(1);
             Destroy(collision.gameObject); //Destroy the bullet that hit the enemy
             Instantiate(explosionPrefab, transform.position, Quaternion.identity); //Spawn in the explosion animation
             Instantiate(material, transform.position, Quaternion.identity); //Spawn in the material

@@ -18,7 +18,7 @@ public class Menu : MonoBehaviour
     bool mayMoveToBase = false;
 
     //Audiomanager
-    public AudioManager audioManager;
+    public AudioManager AudioManager;
 
     //For the fade animation
     public GameObject FadeOut;
@@ -50,7 +50,7 @@ public class Menu : MonoBehaviour
                 timerTime.text = Mathf.Round(timer).ToString();
             if (timer <= 0)
             {
-                audioManager.PlayAudio(5);
+                AudioManager.PlayAudio(0);
                 SceneManager.LoadScene(0);
             }
         }

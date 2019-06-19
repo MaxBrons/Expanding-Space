@@ -23,8 +23,15 @@ public class AudioManager : MonoBehaviour
 
     public void FXAudio(int FXClip)
     {
-        Source.clip = AudioArray[FXClip];
+        Source.clip = FXArray[FXClip];
         Debug.Log(Source.clip);
+        Source.Play();
+    }
+
+    public void RandomBackgroundMusic()
+    {
+        var randomBackgroundMusic = (int)Mathf.Round(Random.Range(1, 3));
+        Source.clip = AudioArray[randomBackgroundMusic];
         Source.Play();
     }
 

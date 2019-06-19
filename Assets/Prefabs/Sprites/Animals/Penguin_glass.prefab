@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8255777714942159285}
   - component: {fileID: 619386419215096150}
   - component: {fileID: 122836501391984402}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Penguin_glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,8 +94,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a046fba228163234c8d4e91dd65a2f72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FXAudioManager: {fileID: 7175207972978261791, guid: c5cf1e660ef16fb48a5fee747e0c3f02,
+    type: 3}
   AnimalAnim: {fileID: 5118007909860528011, guid: 93e6bd24c5691754b8528b228f5b1d65,
     type: 3}
+  foxGO: {fileID: 0}
+  koalaGO: {fileID: 0}
+  pandaGO: {fileID: 0}
+  penguinGO: {fileID: 0}
+  AnimalText: []
   notAnim: 1
 --- !u!61 &122836501391984402
 BoxCollider2D:

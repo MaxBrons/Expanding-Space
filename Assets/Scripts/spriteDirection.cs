@@ -17,6 +17,7 @@ public class spriteDirection : MonoBehaviour
 
     private void Update()
     {
+        //Gets the position of the given object
         this.transform.position = target.position;
     }
 

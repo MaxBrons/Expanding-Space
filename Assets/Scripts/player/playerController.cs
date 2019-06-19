@@ -13,8 +13,9 @@ public class playerController : MonoBehaviour
     public GameObject bulletBullet;
     public Text health_Amount;
     public Animator anim;
+    public GameObject ExplosionAnim;
 
-    public AudioManager audioManager;
+    public AudioManager audioManager, FXAudioManager;
 
     
     [SerializeField] private float maxVelocity = 5f;
@@ -85,13 +86,12 @@ public class playerController : MonoBehaviour
             transform.Translate(velocity * Time.deltaTime);
 
             //Lowers the amount of feul when moving
-            UI.feul -= Time.deltaTime / 5;
+            UI.feul -= Time.deltaTime / 10f;
         }
 
         //You shoot when the left mouse button is pressed
         if (Input.GetButtonDown("Fire1") && mayShoot)
             StartCoroutine(Shoot());
-       
 
         //Forces the player to stay in a surtant play area
         transform.position = new Vector2(
@@ -106,7 +106,7 @@ public class playerController : MonoBehaviour
         //Spawns in the bullet
         Instantiate(bulletBullet, transform.position, transform.rotation);
 
-        audioManager.PlayAudio(13);
+        FXAudioManager.FXAudio(6);
 
         //If the player's damage is upgraded, the player will shoot 2 bullets instead of one
         if (damage > 1)
@@ -114,7 +114,7 @@ public class playerController : MonoBehaviour
             yield return new WaitForSeconds(1/3 * 2);
             //Spawns in the bullet
             Instantiate(bulletBullet, transform.position, transform.rotation);
-            audioManager.PlayAudio(13);
+            FXAudioManager.PlayAudio(6);
         }
             
         //Prevents you from shooting to rapid
@@ -131,13 +131,15 @@ public class playerController : MonoBehaviour
             Destroy(collision.gameObject);
             if (health > 1)
             {
-                audioManager.PlayAudio(9);
+                FXAudioManager.FXAudio(3);
                 health--;
                 health_Amount.text = health.ToString();
             }
             else
             {
-                audioManager.PlayAudio(11);
+                if (ExplosionAnim)
+                    Instantiate(ExplosionAnim, transform.position, Quaternion.identity);
+                audioManager.PlayAudio(5);
                 Instantiate(FadeOut);
             }
         }

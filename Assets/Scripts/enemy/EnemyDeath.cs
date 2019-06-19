@@ -6,7 +6,7 @@ public class EnemyDeath : MonoBehaviour
 {
     public GameObject explosionPrefab;
 
-    public AudioManager audioManager;
+    public AudioManager FXAudioManager;
 
     //If you trigger the collider than the enemy will follow the player
     void OnTriggerEnter2D(Collider2D collision)
@@ -15,7 +15,7 @@ public class EnemyDeath : MonoBehaviour
         //bullet and the enemy
         if (collision.gameObject.tag == "Bullet")
         {
-            audioManager.PlayAudio(1);
+            FXAudioManager.FXAudio(2);
             Destroy(collision.gameObject); //Destroy the bullet that hit the enemy
             Instantiate(explosionPrefab, transform.position, Quaternion.identity); //Spawn in the explosion animation
             gameObject.GetComponent<spriteDirection>().enabled = false;
