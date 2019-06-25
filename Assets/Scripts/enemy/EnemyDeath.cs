@@ -22,4 +22,12 @@ public class EnemyDeath : MonoBehaviour
             Destroy(transform.parent.gameObject); //Destroy the parent object, so that the intire enemy will be destroyed
         }
     }
+
+    public void Explode()
+    {
+        FXAudioManager.FXAudio(2);
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity); //Spawn in the explosion animation
+        gameObject.GetComponent<spriteDirection>().enabled = false;
+        Destroy(transform.parent.gameObject); //Destroy the parent object, so that the intire enemy will be destroyed
+    }
 }

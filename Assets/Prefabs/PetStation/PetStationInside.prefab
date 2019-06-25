@@ -142,7 +142,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 4875886934867698765, guid: 3f042df1a006c5b4aab9d3fccba8c6b4,
+  m_Sprite: {fileID: -7114974213053268882, guid: 920ca59d58632a944ab1f9c722b4b644,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -214,6 +214,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7175207972978261791, guid: c5cf1e660ef16fb48a5fee747e0c3f02,
+          type: 3}
+        m_MethodName: FXAudio
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

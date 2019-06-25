@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class playerController : MonoBehaviour
 {
@@ -45,7 +44,7 @@ public class playerController : MonoBehaviour
     void Update()
     {
         //Sets the rotation of the player to the position of the mouse
-        if(Camera.main)
+        if(Camera.main && !UI.TutorialText)
         {   
             //Gets the position off the player
             Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition + Vector3.forward * 10f);
@@ -63,12 +62,12 @@ public class playerController : MonoBehaviour
 
         //If the W key is pressed trigger the player's movement
         //You stop the trigger when the W key is released
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) && !UI.TutorialText)
         {
             MayMoveNow = true;
             anim.SetTrigger("Move");
         }
-        else if (Input.GetKeyUp(KeyCode.W))
+        else if (Input.GetKeyUp(KeyCode.W) && !UI.TutorialText)
         {
             anim.SetTrigger("Stop");
             MayMoveNow = false;
@@ -90,7 +89,7 @@ public class playerController : MonoBehaviour
         }
 
         //You shoot when the left mouse button is pressed
-        if (Input.GetButtonDown("Fire1") && mayShoot)
+        if (Input.GetButtonDown("Fire1") && mayShoot && !UI.TutorialText)
             StartCoroutine(Shoot());
 
         //Forces the player to stay in a surtant play area
@@ -111,10 +110,10 @@ public class playerController : MonoBehaviour
         //If the player's damage is upgraded, the player will shoot 2 bullets instead of one
         if (damage > 1)
         {
-            yield return new WaitForSeconds(1/3 * 2);
+            yield return new WaitForSeconds(.4f);
             //Spawns in the bullet
             Instantiate(bulletBullet, transform.position, transform.rotation);
-            FXAudioManager.PlayAudio(6);
+            FXAudioManager.FXAudio(6);
         }
             
         //Prevents you from shooting to rapid
@@ -129,19 +128,23 @@ public class playerController : MonoBehaviour
         if (collision.gameObject.tag == "EnemyBullet")
         {
             Destroy(collision.gameObject);
-            if (health > 1)
-            {
-                FXAudioManager.FXAudio(3);
-                health--;
-                health_Amount.text = health.ToString();
-            }
-            else
-            {
-                if (ExplosionAnim)
-                    Instantiate(ExplosionAnim, transform.position, Quaternion.identity);
-                audioManager.PlayAudio(5);
-                Instantiate(FadeOut);
-            }
+            PlayerHit();
+        }
+    }
+
+    public void PlayerHit()
+    {
+        if (health > 1)
+        {
+            FXAudioManager.FXAudio(3);
+            health--;
+            health_Amount.text = health.ToString();
+        }
+        else
+        {
+            if (ExplosionAnim)
+                Instantiate(ExplosionAnim, transform.position, Quaternion.identity);
+            Instantiate(FadeOut);
         }
     }
 }

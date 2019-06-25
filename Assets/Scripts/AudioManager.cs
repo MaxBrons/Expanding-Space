@@ -1,38 +1,42 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
-   
-    public static AudioSource Source;
+    public AudioSource Source;
     public AudioClip[] AudioArray;
     public AudioClip[] FXArray;
+    int randomMusic;
 
     void Start()
     {
-        Source = GetComponent<AudioSource>();
+        //A random background song will be played
+        if (gameObject.name == GameObject.Find("BackgroundMusic").name && SceneManager.GetActiveScene().buildIndex.Equals(1))
+            RandomBackgroundMusic();
     }
 
     public void PlayAudio(int audioClip)
     {
+        //Sets the Background song to a chosen song from the array
+        Source = GameObject.Find("BackgroundMusic").GetComponent<AudioSource>();
         Source.clip = AudioArray[audioClip];
-        Debug.Log(Source.clip);
         Source.Play();
     }
 
     public void FXAudio(int FXClip)
     {
+        //Sets the FX to a chosen FX from the array
+        Source = GameObject.Find("SoundFXManagerObject").GetComponent<AudioSource>();
         Source.clip = FXArray[FXClip];
-        Debug.Log(Source.clip);
         Source.Play();
     }
 
     public void RandomBackgroundMusic()
     {
-        var randomBackgroundMusic = (int)Mathf.Round(Random.Range(1, 3));
-        Source.clip = AudioArray[randomBackgroundMusic];
-        Source.Play();
+            //A random background song will be played
+            Source = GameObject.Find("BackgroundMusic").GetComponent<AudioSource>();
+            Source.clip = AudioArray[Random.Range(1,4)];
+            Source.Play();
     }
 
 }

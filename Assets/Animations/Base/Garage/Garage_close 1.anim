@@ -114,7 +114,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 1.6666666
+  - time: 1.65
     functionName: Exit
     data: Garage
     objectReferenceParameter: {fileID: 0}

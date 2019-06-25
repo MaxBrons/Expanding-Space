@@ -12,13 +12,12 @@ public class bullet : MonoBehaviour
         transform.Translate(Vector2.up * speed * Time.deltaTime);
 
         //If the bullet travels its maximum distance, it will be destroyed
-        maxDistance += 1 * Time.deltaTime;
-        if (maxDistance > 5)
-            Destroy(gameObject);
+        Destroy(gameObject, 2f);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        //If any object exept for the enemy is hit, the bullet impact will be instantiated
         if (collision.gameObject.tag == "PlayerSprite" || collision.gameObject.tag != "Enemy")
             Instantiate(bulletImpact, transform.position, Quaternion.identity);
     }

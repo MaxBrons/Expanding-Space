@@ -48,9 +48,11 @@ public class Menu : MonoBehaviour
             timer -= Time.deltaTime;
             if (timerTime)
                 timerTime.text = Mathf.Round(timer).ToString();
+
             if (timer <= 0)
             {
-                AudioManager.PlayAudio(0);
+                //You will return to Main Menu
+                SetCamPos(false);
                 SceneManager.LoadScene(0);
             }
         }
@@ -91,8 +93,21 @@ public class Menu : MonoBehaviour
     }
 
     //Sets the camera's position to the position of the Base
-    public void SetCamPos()
+    public void SetCamPos(bool boolean)
     {
-        cameraPosBool = true;
+        cameraPosBool = boolean;
+    }
+
+    //Sets all the variables of the game back to their standards
+    public void NewGame()
+    {
+        UI.materials = 0;
+        UI.TutorialText = true;
+        AnimationController.missionNumber = 1;
+
+        playerController.health = 3;
+        playerController.speed = 1f;
+        playerController.shield = 1;
+        playerController.damage = 1;
     }
 }

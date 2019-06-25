@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 7807072908240131159}
   m_Layer: 5
   m_Name: Garage_Close 1
-  m_TagString: Untagged
+  m_TagString: GarageDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

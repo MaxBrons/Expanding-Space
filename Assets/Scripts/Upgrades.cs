@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class Upgrades : MonoBehaviour
 {
-
     [SerializeField] private float cost = 15;
     public Text AmountOfMaterials, Warning;
 
@@ -56,7 +55,7 @@ public class Upgrades : MonoBehaviour
     }
 
 
-    //Adds a extra point to the damage of the player
+    //Adds an extra point to the damage of the player
     public void UpgradeDamage()
     {
         //Only upgrades the damage if the players damage is not already upgraded
@@ -75,7 +74,8 @@ public class Upgrades : MonoBehaviour
 
     public IEnumerator MaterialWarning()
     {
-        if(Warning)
+        //If you don't have anough materials the warning text will be shown
+        if(Warning && Warning.GetComponent<Text>().enabled == false)
         {
             Warning.GetComponent<Text>().enabled = true;
 
