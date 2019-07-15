@@ -17,6 +17,9 @@ TagManager:
   - Panda
   - Penguin
   - GarageDoor
+  - EnemyRocket
+  - Boss
+  - Material
   layers:
   - Default
   - TransparentFX

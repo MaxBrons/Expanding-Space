@@ -14,13 +14,63 @@ public class UI : MonoBehaviour
 
     public static float feul = 100, materials = 0;
     public Text materialText;
-    public GameObject fadeOut,WinFadeOut;
+    public GameObject fadeOut,WinFadeOut,ExitFadeOut;
     public static bool TutorialText = true;
+
+    bool minimap = false, EscapeMenu = false,IsFadingOut = false;
+    public GameObject MinimapObject, MinimapObject_Small, escapeText;
+    public Camera cam;
 
     void Start()
     {
         SpriteArrayIndex = Feulbars.Length;
         feul = 100;
+
+        if (SceneManager.GetActiveScene().buildIndex.Equals(3))
+            TutorialText = false;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+            minimap = true;
+        else if (Input.GetKeyUp(KeyCode.S))
+            minimap = false;
+
+        if (Input.GetKeyDown(KeyCode.Escape) && !IsFadingOut && !EscapeMenu)
+            EscapeMenu = true;
+        else if (Input.GetKeyDown(KeyCode.Escape)&& !IsFadingOut && EscapeMenu)
+            EscapeMenu = false;
+
+        if (minimap && cam)
+        {
+            cam.orthographicSize = 150;
+            MinimapObject.SetActive(true);
+            MinimapObject_Small.SetActive(false);
+        }
+        else if (!minimap && cam && escapeText)
+        {
+            cam.orthographicSize = 50;
+            MinimapObject.SetActive(false);
+            MinimapObject_Small.SetActive(true);
+        }
+
+        if (EscapeMenu && escapeText)
+        {
+            GetComponent<Canvas>().enabled = false;
+            escapeText.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Y) && ExitFadeOut)
+            {
+                IsFadingOut = true;
+                escapeText.SetActive(false);
+                Instantiate(ExitFadeOut);
+            }
+        }
+        else if (!EscapeMenu && escapeText)
+        {
+            GetComponent<Canvas>().enabled = true;
+            escapeText.SetActive(false);
+        }
     }
 
     void FixedUpdate()
@@ -37,7 +87,7 @@ public class UI : MonoBehaviour
             materialText.text = materials.ToString();
 
         //You won and will return to your Base
-        if (enemyCounter == 0 && WinFadeOut)
+        if (enemyCounter < 1 && WinFadeOut)
         {
             Menu.cameraPosBool = true;
             Instantiate(WinFadeOut);

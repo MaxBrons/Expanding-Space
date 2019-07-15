@@ -15,7 +15,6 @@ public class EnemyDeath : MonoBehaviour
         //bullet and the enemy
         if (collision.gameObject.tag == "Bullet")
         {
-            FXAudioManager.FXAudio(2);
             Destroy(collision.gameObject); //Destroy the bullet that hit the enemy
             Instantiate(explosionPrefab, transform.position, Quaternion.identity); //Spawn in the explosion animation
             gameObject.GetComponent<spriteDirection>().enabled = false;
@@ -25,7 +24,6 @@ public class EnemyDeath : MonoBehaviour
 
     public void Explode()
     {
-        FXAudioManager.FXAudio(2);
         Instantiate(explosionPrefab, transform.position, Quaternion.identity); //Spawn in the explosion animation
         gameObject.GetComponent<spriteDirection>().enabled = false;
         Destroy(transform.parent.gameObject); //Destroy the parent object, so that the intire enemy will be destroyed

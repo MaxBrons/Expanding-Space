@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class Upgrades : MonoBehaviour
 {
+    public AudioManager FXAudioManager;
+
     [SerializeField] private float cost = 15;
     public Text AmountOfMaterials, Warning;
 
@@ -19,6 +21,8 @@ public class Upgrades : MonoBehaviour
     {
         if (UI.materials >= cost)
         {
+            FXAudioManager.FXAudio(0);
+
             playerController.health += 1;
             UI.materials -= cost;
         }
@@ -33,6 +37,8 @@ public class Upgrades : MonoBehaviour
     {
         if (UI.materials >= cost)
         {
+            FXAudioManager.FXAudio(0);
+
             playerController.speed += 1;
             UI.materials -= cost;
         }
@@ -46,8 +52,9 @@ public class Upgrades : MonoBehaviour
     public void UpgradeShield()
     {
         if(UI.materials >= cost) {
-            playerController.shield += 1;
+            FXAudioManager.FXAudio(0);
 
+            playerController.shield += 1;
             UI.materials -= cost;
         }
         else
@@ -63,8 +70,8 @@ public class Upgrades : MonoBehaviour
         {
             if (UI.materials >= cost)
             {
+                FXAudioManager.FXAudio(0);
                 playerController.damage += 1;
-
                 UI.materials -= cost;
             }
             else

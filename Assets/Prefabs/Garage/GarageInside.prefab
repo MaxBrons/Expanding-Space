@@ -1200,6 +1200,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec26a1a57d9a16f4a9763567b607d2d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FXAudioManager: {fileID: 7175207972978261791, guid: c5cf1e660ef16fb48a5fee747e0c3f02,
+    type: 3}
   cost: 15
   AmountOfMaterials: {fileID: 945474848274632901}
   Warning: {fileID: 3554977931285878869}

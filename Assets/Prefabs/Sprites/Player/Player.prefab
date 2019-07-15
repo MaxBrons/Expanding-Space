@@ -145,7 +145,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.01
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -411,10 +411,10 @@ MonoBehaviour:
   maxVelocity: 13
   acceleration: 3
   WaitToNextShot: 0.7
-  xMax: 400
-  xMin: -400
-  yMax: 400
-  yMin: -400
+  xMax: 250
+  xMin: -250
+  yMax: 250
+  yMin: -250
   FadeOut: {fileID: 986134797815138771, guid: 202c2f2a59ee5964eb80b70cc5283839, type: 3}
 --- !u!50 &4918024607248261195
 Rigidbody2D:
@@ -519,7 +519,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 43b3c9c6e532c1f4e98ca4f285ef742a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.01
   m_Pitch: 1
   Loop: 1
   Mute: 0

@@ -46,7 +46,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34555f52bc30eb64aaa5215c8aed6852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 532079138746693659, guid: 080481f3c5096a64b916b2794f11aa74, type: 3}
   speed: 10
   bulletImpact: {fileID: 4124536588868291816, guid: 1b3ea93ecf7f58c46978f548a988fe5f,
     type: 3}
@@ -87,7 +86,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2330ccd1302c05d49b999ba23776bf32, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 264e52b0fafb5cb4383df151056e9f94, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -111,7 +110,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.092265606, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.16226578
 --- !u!50 &7607864451187772255

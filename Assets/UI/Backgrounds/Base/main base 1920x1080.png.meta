@@ -1,7 +1,13 @@
 fileFormatVersion: 2
-guid: b9e45ce71fc709b44952156d744f2969
+guid: 4cd70019efb157e438164a14900f1ab7
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4288910686693064452
+    second: main base 1920x1080_0
+  - first:
+      213: 13688385480608713
+    second: main base 1920x1080_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -93,11 +99,53 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: main base 1920x1080_0
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 420
+        width: 300
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea1446087161464788b604b3228fddb
+      internalID: 4288910686693064452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main base 1920x1080_1
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 412
+        width: 160
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21bb01c78615a654ebcf368814620274
+      internalID: 13688385480608713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 259c81c960eb1674eb663d3c1e075fde
+    spriteID: 9a0feab36b8a73d4c8c7d4bffe1b92d6
     internalID: 0
     vertices: []
     indices: 

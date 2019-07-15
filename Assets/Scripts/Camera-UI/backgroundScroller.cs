@@ -3,6 +3,13 @@
 public class backgroundScroller : MonoBehaviour
 {
     [SerializeField] private float parralax = 2f;
+    public Texture[] BackgroundMat;
+
+    private void Start()
+    {
+        if(BackgroundMat.Length != 0)
+            GetComponent<MeshRenderer>().material.SetTexture("_MainTex", BackgroundMat[Random.Range(0, BackgroundMat.Length)]);
+    }
 
     void Update()
     {

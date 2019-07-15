@@ -21,7 +21,7 @@ public class Menu : MonoBehaviour
     public AudioManager AudioManager;
 
     //For the fade animation
-    public GameObject FadeOut;
+    public GameObject FadeOut,FadeMainMenu;
 
     //Set the camera position to a set position when a specific button is pressed
     public static bool cameraPosBool = false;
@@ -84,6 +84,12 @@ public class Menu : MonoBehaviour
     {
         if (FadeOut)
             Instantiate(FadeOut);
+    }
+
+    public void FadeToMainMenu()
+    {
+        if (FadeMainMenu)
+            Instantiate(FadeMainMenu);
     }
 
     //Moves the camera down from Main Menu to the Base

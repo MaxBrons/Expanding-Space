@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class playerController : MonoBehaviour
 {
-
     Vector2 velocity = Vector2.zero;
     Vector2 force;
     Transform player;
@@ -43,59 +42,63 @@ public class playerController : MonoBehaviour
 
     void Update()
     {
-        //Sets the rotation of the player to the position of the mouse
-        if(Camera.main && !UI.TutorialText)
-        {   
-            //Gets the position off the player
-            Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition + Vector3.forward * 10f);
-
-            //Sets the rotation off the player to the mouse position
-            float angle = AngleBetweenPoints(transform.position, mouseWorldPosition);
-            transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle + 90));
-
-            //Returns the angle between the player and the cursor
-            float AngleBetweenPoints(Vector2 a, Vector2 b)
+        //If the tutorial info is active you won't be allowed to controll the player
+        if (!UI.TutorialText)
+        {
+            //Sets the rotation of the player to the position of the mouse
+            if (Camera.main)
             {
-                return Mathf.Atan2(a.y - b.y, a.x - b.x) * Mathf.Rad2Deg;
+                //Gets the position off the player
+                Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition + Vector3.forward * 10f);
+
+                //Sets the rotation off the player to the mouse position
+                float angle = AngleBetweenPoints(transform.position, mouseWorldPosition);
+                transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle + 90));
+
+                //Returns the angle between the player and the cursor
+                float AngleBetweenPoints(Vector2 a, Vector2 b)
+                {
+                    return Mathf.Atan2(a.y - b.y, a.x - b.x) * Mathf.Rad2Deg;
+                }
             }
+
+            //If the W key is pressed trigger the player's movement
+            //You stop the trigger when the W key is released
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                MayMoveNow = true;
+                anim.SetTrigger("Move");
+            }
+            else if (Input.GetKeyUp(KeyCode.W))
+            {
+                anim.SetTrigger("Stop");
+                MayMoveNow = false;
+                velocity = Vector2.zero; //Resets the velocity of the player
+            }
+
+            if (MayMoveNow)
+            {
+                //Player moves forward when the W key is pressed
+                force = Vector2.up * speed * acceleration * Time.deltaTime;
+                velocity += force;
+
+                //Increases the movement speed over time
+                velocity = Vector2.ClampMagnitude(velocity, maxVelocity);
+                transform.Translate(velocity * Time.deltaTime);
+
+                //Lowers the amount of feul when moving
+                UI.feul -= Time.deltaTime / 10f;
+            }
+
+            //You shoot when the left mouse button is pressed
+            if (Input.GetButtonDown("Fire1") && mayShoot && !UI.TutorialText)
+                StartCoroutine(Shoot());
+
+            //Forces the player to stay in a surtant play area
+            transform.position = new Vector2(
+            Mathf.Clamp(transform.position.x, xMin, xMax),
+            Mathf.Clamp(transform.position.y, yMin, yMax));
         }
-
-        //If the W key is pressed trigger the player's movement
-        //You stop the trigger when the W key is released
-        if (Input.GetKeyDown(KeyCode.W) && !UI.TutorialText)
-        {
-            MayMoveNow = true;
-            anim.SetTrigger("Move");
-        }
-        else if (Input.GetKeyUp(KeyCode.W) && !UI.TutorialText)
-        {
-            anim.SetTrigger("Stop");
-            MayMoveNow = false;
-            velocity = Vector2.zero; //Resets the velocity of the player
-        }
-
-        if (MayMoveNow)
-        {
-            //Player moves forward when the W key is pressed
-            force = Vector2.up * speed * acceleration * Time.deltaTime;
-            velocity += force;
-
-            //Increases the movement speed over time
-            velocity = Vector2.ClampMagnitude(velocity, maxVelocity);
-            transform.Translate(velocity * Time.deltaTime);
-
-            //Lowers the amount of feul when moving
-            UI.feul -= Time.deltaTime / 10f;
-        }
-
-        //You shoot when the left mouse button is pressed
-        if (Input.GetButtonDown("Fire1") && mayShoot && !UI.TutorialText)
-            StartCoroutine(Shoot());
-
-        //Forces the player to stay in a surtant play area
-        transform.position = new Vector2(
-        Mathf.Clamp(transform.position.x, xMin, xMax),
-        Mathf.Clamp(transform.position.y, yMin, yMax));
     }
 
     public IEnumerator Shoot()
@@ -130,10 +133,17 @@ public class playerController : MonoBehaviour
             Destroy(collision.gameObject);
             PlayerHit();
         }
+        else if (collision.gameObject.tag == "EnemyRocket")
+        {
+            Instantiate(ExplosionAnim, transform.position, Quaternion.identity);
+            Destroy(collision.gameObject);
+            PlayerHit();
+        }
     }
 
     public void PlayerHit()
     {
+        //Damage is done to the player when function is called
         if (health > 1)
         {
             FXAudioManager.FXAudio(3);

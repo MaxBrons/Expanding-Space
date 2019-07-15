@@ -40,7 +40,7 @@ public class enemyController : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, zAngle);
 
             //The enemy will start shooting at the player
-            if (mayShoot && Enemy_Normal)
+            if (mayShoot && Enemy_Normal && !UI.TutorialText)
                 StartCoroutine(Shoot());
         }
     }
