@@ -714,7 +714,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5672371222399328963}
-  - component: {fileID: 7369663587941455660}
+  - component: {fileID: 2177563560121448585}
   m_Layer: 0
   m_Name: PetStationInside
   m_TagString: PetStation
@@ -737,7 +737,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7369663587941455660
+--- !u!212 &2177563560121448585
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -389,7 +389,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0.0627451, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -625,6 +625,7 @@ MonoBehaviour:
   timeToSmooth: 0.3
   AudioManager: {fileID: 0}
   FadeOut: {fileID: 986134797815138771, guid: fe6b3fa30bf324149b0250cb1d894c61, type: 3}
+  FadeMainMenu: {fileID: 0}
 --- !u!1001 &901202803
 PrefabInstance:
   m_ObjectHideFlags: 0
